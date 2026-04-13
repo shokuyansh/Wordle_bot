@@ -1,3 +1,5 @@
+#pragma once
+#include "word_list.hh"
 #include <queue>
 #include <string>
 #include <vector>
