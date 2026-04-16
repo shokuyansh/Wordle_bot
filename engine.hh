@@ -19,8 +19,9 @@ struct CompareEntropy {
 };
 enum COLOR_SET { GREY = 0, YELLOW = 1, GREEN = 2 };
 
-void prob_of_all_patterns_of_a_word(Word &guess_word);
+void prob_of_all_patterns_of_a_word(Word &guess_word,
+                                    vector<string> &updated_word_list);
 
-float entropy_for_word(Word &guess_word);
+float entropy_for_word(Word &guess_word, vector<string> &updated_word_list);
 
 int pattern_matcher(const Word &guess_word, const string &word);

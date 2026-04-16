@@ -53,8 +53,9 @@ int pattern_matcher(const Word &guess_word, const string &word) {
 // abune
 // G__YG
 // 2*3^4+1*3+2*1
-void prob_of_all_patterns_of_a_word(Word &guess_word) {
-  for (auto word : word_list) {
+void prob_of_all_patterns_of_a_word(Word &guess_word,
+                                    vector<string> &updated_word_list) {
+  for (auto word : updated_word_list) {
     int pattern_index = pattern_matcher(guess_word, word);
     // printf("pattern_index : %d", pattern_index);
     guess_word.prob_distribution[pattern_index]++;
@@ -62,10 +63,10 @@ void prob_of_all_patterns_of_a_word(Word &guess_word) {
 }
 
 // Entropy calculation
-float entropy_for_word(Word &guess_word) {
+float entropy_for_word(Word &guess_word, vector<string> &updated_word_list) {
   float entropy = 0.0f;
-  const int word_list_size = word_list.size();
-  prob_of_all_patterns_of_a_word(guess_word);
+  const int word_list_size = updated_word_list.size();
+  prob_of_all_patterns_of_a_word(guess_word, updated_word_list);
   for (auto pattern_freq : guess_word.prob_distribution) {
     // printf("\n prob : %d", pattern_freq);
     float pattern_prob = (float)pattern_freq / (float)word_list_size;
