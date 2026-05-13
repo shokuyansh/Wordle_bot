@@ -23,7 +23,7 @@ $$H(X)=−\sum_{x∈X}P(x) \log_{2}(P(x))$$
 
 ## Build the bot in your system
 Ensure you have [CMake](https://cmake.org/download/) and a C++ compiler installed in your system .
-
+Clone the repo and 
 1. Generate the build directory
 ```code 
 cmake -S . -B build
