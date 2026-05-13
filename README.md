@@ -17,7 +17,7 @@ $$H(X)=−\sum_{x∈X}P(x) \log_{2}(P(x))$$
 5. Repeating this process for all almost 18k words, gives us the initial ranking list.
 
 ### What happen's when user chooses a word
-1. Based on the word choosen and it's entropy, word list is halfed a number of times(basically $(1/2)^number_of_bits)$.
+1. Based on the word choosen and it's entropy, word list is halfed a number of times(basically $(1/2)^{number of bits})$.
 2. Now, bot uses the **target word** against each word to recalculate the entropy for each word, using the pattern distribution as discussed above.
 3. Thus, if the odds play right bot will be able to solve the game before 6 rounds.
 
